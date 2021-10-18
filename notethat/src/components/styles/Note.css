@@ -1,0 +1,36 @@
+.card-body{
+    background: #FFFAD7;
+    border: 2px solid #F2CC39;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height:min-content;
+    margin:1.4vw;
+    padding:2vw;
+
+}
+.note-title{
+    color: #20399F;
+    font-size: 3vw;
+    margin:0;
+
+}
+.note-information{
+max-width: 38vw;
+max-height: 13vh;
+}
+.edit-btn,.delete-btn{
+    width:9vw;
+    background: #20399f;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 2vw;
+    border: none;
+    cursor: pointer;
+    color: #fffad7;
+    margin-right:.5vw;
+   
+}

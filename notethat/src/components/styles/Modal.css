@@ -1,0 +1,50 @@
+.modal{
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+    width: 60vw;
+    max-width: 100%;
+    height:30vh;
+    max-height: 100%;
+}
+
+.modal-title{
+    width: 35vw;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid #20399f;
+
+}
+.modal-info{
+    width: 35vw;
+    height:15vh;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border: 2.5px solid #20399f;
+    margin-top:5vw;
+}
+
+.close-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left:54vw;
+}
+.edit-button,.create-button{
+    width: 20vw;
+    height: 3vh;
+    background: #20399f;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 2vw;
+    border: none;
+    cursor: pointer;
+    color: #fffad7;
+    margin-top: 3vw;
+}
