@@ -15,29 +15,29 @@
     margin-left:45vw;
 }
 .btn-create-note{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
     border: 3px solid #20399F;
     box-sizing: border-box;
     border-radius: 10px;
     width: 39vw;
+    padding:1vw;
   height: 3.8vh;
   font-weight: 500;
-  font-size: 2.5vw;
+  font-size: 2.8vw;
   cursor: pointer;
   background-color: transparent;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-left:15vw;
+  margin-left:13vw;
 }
 .div-my-notes{
-    width: 35vw;
+    width: 38vw;
     height: 6.7vh;
     background: #20399f;
     border-radius: 0 50px 50px 0;
     font-weight: 500;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     border: none;
-    cursor: pointer;
     color: #fffad7;
     display:flex;
     flex-direction: column;
@@ -54,8 +54,8 @@
     margin-top:3vh;
 }
 .add-icon{
-    margin-left:4vw;
-
+    margin-left:5vw;
+    margin-right:1.7vw;
 }
 
 .notes-container{
@@ -64,5 +64,6 @@
     flex-direction: row;
     flex-wrap: wrap;
 align-content: center;
+align-items: center;
 justify-content: center;
 }

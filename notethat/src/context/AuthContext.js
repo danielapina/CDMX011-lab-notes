@@ -18,11 +18,12 @@ export const AuthProvider = (props) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-
-  setCurrentUser(user)
-  setUid(user.uid)
-  //console.log(user.uid)
-
+      if(user){
+        setCurrentUser(user)
+        setUid(user.uid)
+      }else{
+        console.log('im not logged in')
+      }
     });
   }, []);
 

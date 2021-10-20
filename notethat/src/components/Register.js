@@ -3,7 +3,6 @@ import { Link, useHistory } from "react-router-dom";
 import "./styles/Register.css";
 import logo from "../assets/logo.png";
 import line from "../assets/line-form.png";
-import facebook from "../assets/facebook.png";
 import google from "../assets/google.png";
 import { useAuth } from "../context/AuthContext";
 
@@ -85,17 +84,13 @@ console.log('google')
             handleRegister(email, pass,confirmPass);
           }}  
         >
-          Registrate
+          Sign Up
         </button>
         <img src={line} alt="line-form" className="line-form" />
         <div className="social-buttons">
-          <button className="btn-facebook">
-            <img src={facebook} alt="facebook-logo" className="facebook-logo" />
-            Facebbok
-          </button>
           <button className="btn-google"  onClick={handleGoogle} >
             <img src={google} alt="google-logo" className="google-logo"  />
-            Google
+           Continue With Google
           </button>
         </div>
       </div>

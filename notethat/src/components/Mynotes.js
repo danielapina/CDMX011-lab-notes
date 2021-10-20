@@ -7,14 +7,17 @@ import { useAuth } from "../context/AuthContext";
 import { db } from "../firebaseconfig";
 import { collection, onSnapshot,orderBy } from "@firebase/firestore";
 import { Icon } from '@iconify/react';
+import { useHistory } from "react-router-dom";
 
 function Mynotes() {
   const [notes, setNotes] = useState([]);
   const { currentUser,logout } = useAuth();
+  const history = useHistory();
  
   const handleLogout = async () => {
     try{
      await logout()
+     history.push('/login')
     }catch(error){
       console.log(error)
     }
@@ -23,7 +26,7 @@ function Mynotes() {
   useEffect(() => {
     const renderNotes = ()=>{
       try{
-        onSnapshot(collection(db, "notes"),orderBy('date','asc'), (querySnapshot) => {
+        onSnapshot(collection(db, "notes"),orderBy('date','desc'), (querySnapshot) => {
          const documents = [];
          querySnapshot.forEach((doc) => {
            documents.push({ id:doc.id, ...doc.data() });
@@ -44,7 +47,7 @@ function Mynotes() {
   const showModal = () => setIsVisible(true);
   const hideModal = () => setIsVisible(false);
  
-  const newNote = {title:'' , information:''};
+  const newNote = {title:'' , information:'',date:''};
 
   return (
     <div className="container-mynotes">
@@ -84,5 +87,4 @@ notes.map((note) => (
     </div>
   );
 }
-
 export default Mynotes;

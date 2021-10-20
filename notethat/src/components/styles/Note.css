@@ -6,31 +6,61 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
+    min-width: 23vw;
     height:min-content;
     margin:1.4vw;
     padding:2vw;
 
 }
 .note-title{
+    display:flex;
+    justify-content: center;
+    width:90%;
     color: #20399F;
     font-size: 3vw;
     margin:0;
+    border-bottom: 2.5px solid #F2CC39;
 
 }
 .note-information{
-max-width: 38vw;
-max-height: 13vh;
+max-width: 33vw;
+max-height: 15vh;
+text-overflow: hidden;
+padding:2.2vw;
+margin-bottom: 2vw;
+}
+
+.note-information::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+    display:none;
 }
 .edit-btn,.delete-btn{
-    width:9vw;
-    background: #20399f;
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 2vw;
+    background: transparent;
     border: none;
     cursor: pointer;
-    color: #fffad7;
-    margin-right:.5vw;
    
+}
+.date-label{
+    color:#20399f;
+    margin-bottom:0;
+}
+.note-date{
+    margin:0;
+    width:100%;
+}
+.card-actions{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content:space-around;
+height:auto;
+   
+    margin:1.5vw 1.5vw 0vw 1.5vw;
+
+    
+}
+.hidden-div{
+    width:100%;
+    height: 5.5vw;
 }

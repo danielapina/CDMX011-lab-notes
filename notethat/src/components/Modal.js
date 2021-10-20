@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import { db } from '../firebaseconfig';
 import { collection, addDoc, doc, updateDoc  } from "firebase/firestore";
@@ -24,17 +24,12 @@ const customStyles = {
 
 export const Modal = ({note, mode, isVisible, hideModal }) => {
 const {currentUid} = useAuth();
- const {  id, title, information,user } = note;
+ const {  id, title, information } = note;
  const [ newTitle, setNewTitle ] = useState(title);
- const [ newUser, setNewUser ] = useState(user);
+ const [ user ] = useState(currentUid);
  const [ newInformation, setNewInformation]  = useState(information);
  const [ isOpen, setIsOpen ] = useState(isVisible);
 
- useEffect(() => {
-    setNewUser(currentUid);
-
-  }, []);
- 
 
  const closeModal = () => {
      setIsOpen(false);
@@ -57,7 +52,7 @@ const {currentUid} = useAuth();
  const createNote = async () => {
     try{
        await addDoc(collection(db, "notes"), {
-           user:newUser,
+           user:user,
            title : newTitle,
            date: new Date().toDateString(),
            information : newInformation
@@ -73,7 +68,7 @@ const {currentUid} = useAuth();
         await updateDoc(doc(db, "notes", id), {
             title : newTitle,
             information : newInformation,
-            date: new Date().toDateString()
+            date:new Date().toDateString()
           })
      }catch(error){
         console.error(error);

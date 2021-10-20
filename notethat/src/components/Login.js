@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import "./styles/Login.css";
 import logo from "../assets/logo.png";
 import line from "../assets/line-form.png";
-import facebook from "../assets/facebook.png";
 import google from "../assets/google.png";
 import { useAuth } from "../context/AuthContext";
 
@@ -69,7 +67,7 @@ console.log(error)
         />
 
         <button
-          className="btn-login"
+          className="btn-register"
           onClick={() => {
             handleLogin(email, pass);
           }}
@@ -78,17 +76,14 @@ console.log(error)
         </button>
         <img src={line} alt="line-form" className="line-form" />
         <div className="social-buttons">
-          <button className="btn-facebook">
-            <img src={facebook} alt="facebook-logo" className="facebook-logo" />
-            Facebbok
-          </button>
+         
           <button className="btn-google" onClick={handleGoogle}>
             <img src={google} alt="google-logo" className="google-logo" />
-            Google
+            Continue With Google
           </button>
         </div>
       </div>
-      <p>
+      <p className="link-to">
         Don't have an account yet?{" "}
         <Link to="/register" className="links">
           Sign Up
