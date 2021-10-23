@@ -1,23 +1,21 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,signInWithPopup, GoogleAuthProvider,signOut
+  signInWithPopup, GoogleAuthProvider
 } from "firebase/auth";
-import { auth } from "../firebaseconfig";
+
 
 
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
-export const AuthProvider = (props) => {
+export const AuthProvider = ({children, ...restProps}) => {
   const [currentUser, setCurrentUser] = useState({});
   const [currentUid, setUid] = useState({});
 
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    restProps.onAuthStateChanged(restProps.auth, (user) => {
       if(user){
         setCurrentUser(user)
         setUid(user.uid)
@@ -29,13 +27,13 @@ export const AuthProvider = (props) => {
 
 
   const signup = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+    return restProps.createUserWithEmailAndPassword(restProps.auth, email, password);
   };
   const login = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
+    return restProps.signInWithEmailAndPassword(restProps.auth, email, password);
   };
   const logout = () => {
-    signOut(auth);
+    restProps.signOut(restProps.auth);
   };
 
  
@@ -43,12 +41,12 @@ export const AuthProvider = (props) => {
 
 const loginGoogle=()=>{
   const provider = new GoogleAuthProvider();
-  signInWithPopup(auth, provider);
+  signInWithPopup(restProps.auth, provider);
 } 
 
   const value = { signup, login, currentUser, loginGoogle,logout,currentUid};
 
   return (
-    <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
+    <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
   );
 };

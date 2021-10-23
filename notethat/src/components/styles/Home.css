@@ -7,7 +7,7 @@
 }
 .header-home{
     background-color: #fffad7;
-    height: 10vh;
+    height: 16vmin;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,8 +15,8 @@
 }
 .btn-heading-signup,.btn-heading-login{
     text-decoration: none;
-    width: 13vw;
-    height: 3.3vh;
+    width: 15vmin;
+    height: 4.5vmin;
     background: #20399f;
     border-radius: 10px;
     font-weight: 500;
@@ -24,11 +24,11 @@
     border: none;
     cursor: pointer;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 2vw;
     color: #fffad7;
 }
 .btn-heading-signup{
-    margin-left:28vw;
+    margin-left:25vw;
 }
 .btn-heading-login{
     margin-left:5vw;
@@ -37,27 +37,27 @@
 
 .btn-signup{
     text-decoration: none;
-    width: 38vw;
-    height: 3.7vh;
+    width: 40vmin;
+    height: 4.6vmin;
     background: #20399f;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 2.3vw;
+    font-size: 2.3vmin;
     border: none;
     cursor: pointer;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 3vmin;
     color: #fffad7;
 }
 .home-content{
-    width: 76vw;
+    width: 76vmin;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   background: rgba(163, 205, 217, 0.2);
   border-radius: 10px;
-  padding:4vw;
+  padding:4vmin;
   margin-top:10vh;
 }
 .that-idea{
@@ -68,10 +68,10 @@ margin-top:0;
 }
 .note-that-img{
     width: auto;
-    height: 6vh;
+    height: 8.3vmin;
 }
 .bye-paper-div{
-    margin-left: 10vw;
+    margin-left: 12vmin;
     width:30%;
     display: flex;
     flex-direction: column;
@@ -84,26 +84,26 @@ margin-top:0;
     flex-direction: row;
     }
 .post-it-img{
-    width: 30vw;
+    width: 30vmin;
 
     }
 .bye-paper{
-    width: 35vw;
-    height: 7vh;
+    width: 35vmin;
+    height: 8vmin;
 
     }
     .footer{
         width:100%;
         background-color: #fffad7;
-        height:7vh;
-        margin-top:13vh;
+        height:8vmin;
+        margin-top:13vmin;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .logo-footer{
-        height:4.6vh;
+        height:5vmin;
 
     }
     .home-title {
@@ -112,7 +112,7 @@ margin-top:0;
         align-content: center;
         align-items: center;
         justify-content: center;
-        margin-top: 10vh;
+        margin-top: 12.3vmin;
       }
       .title-home {
         font-weight: 400;
