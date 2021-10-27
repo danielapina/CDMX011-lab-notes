@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import line from "../assets/line-form.png";
 import google from "../assets/google.png";
 
-const FormLogin = ({ handleLogin, handleGoogle }) => {
+const FormRegister = ({ handleRegister, handleGoogle }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
 
   return (
     <div className="form-content">
+      <h4>Name</h4>
+      <input type="text" placeholder="Your Name" />
       <h4>Email</h4>
       <input
         type="text"
@@ -26,14 +29,22 @@ const FormLogin = ({ handleLogin, handleGoogle }) => {
           setPass(e.target.value);
         }}
       />
-
+      <h4>Confirm Password</h4>
+      <input
+        type="password"
+        required
+        placeholder="Confirm Your Password"
+        onChange={(e) => {
+          setConfirmPass(e.target.value);
+        }}
+      />
       <button
         className="btn-register"
         onClick={() => {
-          handleLogin(email, pass);
+          handleRegister(email, pass, confirmPass);
         }}
       >
-        Log In
+        Sign Up
       </button>
       <img src={line} alt="line-form" className="line-form" />
       <div className="social-buttons">
@@ -45,5 +56,4 @@ const FormLogin = ({ handleLogin, handleGoogle }) => {
     </div>
   );
 };
-
-export default FormLogin;
+export default FormRegister;

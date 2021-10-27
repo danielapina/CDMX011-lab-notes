@@ -17,17 +17,19 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor:'#FFFAD7',
-    border:'none',
+    border:'2px solid #F2CC39',
     borderRadius: '10px'
+
   },
 };
 
 export const Modal = ({note, mode, isVisible, hideModal }) => {
 const {currentUid} = useAuth();
+const characterLimit = 280
  const {  id, title, information } = note;
- const [ newTitle, setNewTitle ] = useState(title);
- const [ user ] = useState(currentUid);
+ const [ newTitle, setNewTitle ] = useState(title)
  const [ newInformation, setNewInformation]  = useState(information);
+ const [ user ] = useState(currentUid);
  const [ isOpen, setIsOpen ] = useState(isVisible);
 
 
@@ -47,7 +49,11 @@ const {currentUid} = useAuth();
  }
 
  const handleTitleChange = (e) => setNewTitle(e.target.value);
- const handleInformationChange = (e) => setNewInformation(e.target.value);
+ const handleInformationChange = (e) => {
+     if(characterLimit - e.target.value.length >=0){
+        setNewInformation(e.target.value);
+     }
+ }
 
  const createNote = async () => {
     try{
@@ -81,8 +87,9 @@ const {currentUid} = useAuth();
             
             <button className="close-button" onClick={closeModal}><Icon  icon="ant-design:close-circle-filled" color="#20399f" height="26" /></button>
 
-            <input className="modal-title" type="text" value={newTitle} placeholder="Title" onChange={handleTitleChange}/>
-            <textarea className="modal-info" type="text" value={newInformation} placeholder="Note Information" onChange={handleInformationChange}/>
+            <input className="modal-title" type="text" value={newTitle} required placeholder="Title" onChange={handleTitleChange}/>
+            <textarea className="modal-info" type="text" required value={newInformation} placeholder="Note Information" onChange={handleInformationChange}/>
+            <p><span className='that-span'>{characterLimit - newInformation.length}</span> characters remaining</p>
             {
                 mode === 'edit' ?
                 <button type="submit" className="edit-button" >Update Note</button> :
