@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dosis:wght@200;300;400;500;600&display=swap');
+
 * {
-  font-family: "Dosis", sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 .links {
   text-decoration: none;
@@ -125,4 +127,11 @@
   font-weight: 300;
   font-size: 3vw;
 
+}
+
+.error{
+  color: #fffad7;
+  background-color:#e63946;
+  padding:.5vw;
+  border-radius: 10px;
 }

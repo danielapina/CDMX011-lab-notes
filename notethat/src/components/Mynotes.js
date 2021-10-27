@@ -1,20 +1,21 @@
+import "./styles/Mynotes.css";
+import logo from "../assets/logo.png";
+import { Icon } from "@iconify/react";
+
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Note } from "./Note";
 import { Modal } from "./Modal";
-import logo from "../assets/logo.png";
-import "./styles/Mynotes.css";
 import { useAuth } from "../context/AuthContext";
+
 import { db } from "../firebaseconfig";
-import { collection, onSnapshot, orderBy } from "@firebase/firestore";
-import { Icon } from "@iconify/react";
-import { useHistory } from "react-router-dom";
+import { collection, onSnapshot, orderBy} from "@firebase/firestore";
 
 function Mynotes() {
   const [notes, setNotes] = useState([]);
   const { currentUser, logout } = useAuth();
   const history = useHistory();
   const [searchText, setSearchText] = useState("");
-
 
   const handleLogout = async () => {
     try {
@@ -68,16 +69,16 @@ function Mynotes() {
           <p>{currentUser.email}</p>
         </div>
         <div className="search">
-           <Icon icon='bi:search' color='#20399F' height='28' />
-            <input
-              placeholder="Type to search..."
-              type="text"
-              onChange={(e) => {
-                setSearchText(e.target.value);
-              }}
-            />
-          </div>
-        
+          <Icon icon="bi:search" color="#20399F" height="28" />
+          <input
+            placeholder="Type to search..."
+            type="text"
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+        </div>
+
         <button className="btn-create-note" onClick={showModal}>
           <Icon
             className="add-icon"
@@ -88,15 +89,18 @@ function Mynotes() {
         </button>
       </div>
 
-
       <div className="notes-container">
         {notes
-          .filter((nota) => (JSON.stringify(nota).toLowerCase()).includes(searchText.toLowerCase()))
+          .filter((nota) =>
+            JSON.stringify(nota)
+              .toLowerCase()
+              .includes(searchText.toLowerCase())
+          )
           .map((note) =>
             currentUser.uid === note.user ? (
               <Note note={note} key={note.id} />
             ) : (
-              console.log("this user has 0 notes")
+              ''
             )
           )}
       </div>

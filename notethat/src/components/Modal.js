@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import { db } from '../firebaseconfig';
 import { collection, addDoc, doc, updateDoc  } from "firebase/firestore";
@@ -27,19 +27,11 @@ export const Modal = ({note, mode, isVisible, hideModal }) => {
 const {currentUid} = useAuth();
 const characterLimit = 280
  const {  id, title, information } = note;
- const [ newTitle, setNewTitle ] = useState(window.localStorage.getItem('titleNote')|| title)
- const [ newInformation, setNewInformation]  = useState(window.localStorage.getItem('titleData')|| information);
+ const [ newTitle, setNewTitle ] = useState(title)
+ const [ newInformation, setNewInformation]  = useState(information);
  const [ user ] = useState(currentUid);
  const [ isOpen, setIsOpen ] = useState(isVisible);
- 
-useEffect(()=>{
-window.localStorage.setItem('titleNote',newTitle)
-window.localStorage.setItem('titleData',newInformation)
-},[newTitle,newInformation])
- 
-useEffect(()=>{
-window.localStorage.clear()
-    },[])
+
 
  const closeModal = () => {
      setIsOpen(false);
