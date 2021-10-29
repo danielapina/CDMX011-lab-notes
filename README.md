@@ -5,15 +5,13 @@
 * Note That is a Single Page App for creating Notes designed to be used from a tablet. Created for users that like to organize their ideas in one place. It is a page with a minimalist design to allow the user to organize their ideas more clearly. 
 
 
-## Índice
+## Page Protype
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del Proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker Edition](#6-hacker-edition)
-* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
+* Home Page
+* Sign In Page
+* Sign Up Page
+* Note Wall Page
+
 
 ***
 
