@@ -14,14 +14,18 @@
 
 
 
+
+
+
+
 * Home Page
-![iPad mini - 1](https://user-images.githubusercontent.com/79501211/139490427-0a014819-55b2-455b-9144-31b0eeddb329.png)
+![iPad mini - 1 (1)](https://user-images.githubusercontent.com/79501211/139490937-ea0a1fb7-e415-4a60-8a0d-7129e1f101e0.png)
 * Sign Up Page
-![iPad Pro 11_ - 3](https://user-images.githubusercontent.com/79501211/139490421-eeb19c64-8238-4690-898a-b045fe0d73db.png)
+![iPad Pro 11_ - 3 (1)](https://user-images.githubusercontent.com/79501211/139490913-2048f9c0-d1cc-46c9-839f-f86a393a410e.png)
 * Sign In Page
-![Frame 1](https://user-images.githubusercontent.com/79501211/139490433-6616d69a-2f7d-4f6d-801d-1fc0884cf679.png)
+![Frame 1 (1)](https://user-images.githubusercontent.com/79501211/139490920-d87f3762-6ea9-4b18-94f7-65c30932171d.png)
 * Note Wall Page
-![iPad Pro 11_ - 5](https://user-images.githubusercontent.com/79501211/139490440-85508103-3c3f-4f4c-b808-71712f991bcd.png)
+![iPad Pro 11_ - 5 (1)](https://user-images.githubusercontent.com/79501211/139490928-214b9d40-2a47-41d2-b9a0-e23c6a098880.png)
 
 
 ***
