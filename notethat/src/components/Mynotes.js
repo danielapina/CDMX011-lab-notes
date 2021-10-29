@@ -9,7 +9,7 @@ import { Modal } from "./Modal";
 import { useAuth } from "../context/AuthContext";
 
 import { db } from "../firebaseconfig";
-import { collection, onSnapshot, orderBy} from "@firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "@firebase/firestore";
 
 function Mynotes() {
   const [notes, setNotes] = useState([]);
@@ -30,8 +30,8 @@ function Mynotes() {
     const renderNotes = () => {
       try {
         onSnapshot(
-          collection(db, "notes"),
-          orderBy("date", "desc"),
+          query(collection(db, "notes"),
+          orderBy("date", "desc")),
           (querySnapshot) => {
             const documents = [];
             querySnapshot.forEach((doc) => {
