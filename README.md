@@ -2,6 +2,9 @@
 
 [Link to Page Hosting](https://note-that.firebaseapp.com/)
 
+* Note That is a Single Page App for creating Notes designed to be used from a tablet. Created for users that like to organize their ideas in one place. It is a page with a minimalist design to allow the user to organize their ideas more clearly. 
+
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
