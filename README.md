@@ -11,7 +11,8 @@
 #### Home Page
 <img src="https://user-images.githubusercontent.com/79501211/139490937-ea0a1fb7-e415-4a60-8a0d-7129e1f101e0.png" width="400" height="auto"/> 
 
-#### Sign Up Page <img src="https://user-images.githubusercontent.com/79501211/139490913-2048f9c0-d1cc-46c9-839f-f86a393a410e.png" width="400" height="auto"/>
+#### Sign Up Page 
+<img src="https://user-images.githubusercontent.com/79501211/139490913-2048f9c0-d1cc-46c9-839f-f86a393a410e.png" width="400" height="auto"/>
 
 * Sign In Page
 ![Frame 1 (1)](https://user-images.githubusercontent.com/79501211/139490920-d87f3762-6ea9-4b18-94f7-65c30932171d.png)
