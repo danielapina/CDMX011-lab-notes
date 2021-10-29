@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dosis:wght@200;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Dosis', sans-serif;
+}
+.links {
+  text-decoration: none;
+  font-weight: 400;
+  color: #20399f;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  height: 133.3vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: contain;
+  background-image: url(../../assets/background.png);
+  background-repeat: no-repeat;
+}
+.header {
+  background-color: #fffad7;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.logotype {
+  width: auto;
+  height: 9vmin;
+}
+.form-title {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vh;
+}
+.title {
+  font-weight: 400;
+  font-size: 5.3vmin;
+  margin: 0;
+}
+.slogan {
+  font-weight: 300;
+  font-size: 3vmin;
+}
+.that-span {
+  color: #20399f;
+  font-weight: 500;
+}
+.form-content {
+  width: 50vmin;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(163, 205, 217, 0.3);
+  border-radius: 13px;
+  padding: 4vmin;
+}
+.form-content input {
+  width: 35vmin;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid #20399f;
+  font-size: 2.5vmin;
+}
+.form-content h4 {
+  align-self: flex-start;
+  margin: 3vmin 7vmin  ;
+  font-weight: 400;
+  font-size: 2.7vmin;
+}
+
+.line-form {
+  height: auto;
+  width: 39vmin;
+}
+.social-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.btn-register {
+  width: 30vmin;
+  height: 4vmin;
+  background: #20399f;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 2.3vmin;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  color: #fffad7;
+  margin-top: 3vmin;
+}
+
+.btn-google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 30vmin;
+  height: 4vmin;
+  font-size: 2.3vmin;
+  background: #f44336;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fffad7;
+  margin-top: 3vmin;
+}
+.google-logo {
+  width: 2vmin;
+  margin-right: 0.8vmin;
+}
+.link-to {
+  font-weight: 300;
+  font-size: 3vmin;
+}
+
+.error{
+  color: #fffad7;
+  background-color:#e63946;
+  padding:.5vmin;
+  border-radius: 10px;
+}

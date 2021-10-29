@@ -1,0 +1,59 @@
+.card-body{
+    background: #FFFAD7;
+    border: 2px solid #F2CC39;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: min-content;
+    height:min-content;
+    margin:1.4vmin;
+    padding:2vmin;
+
+}
+.note-title{
+    display:flex;
+    justify-content: center;
+    width:90%;
+    color: #20399F;
+    font-size: 3vmin;
+    margin:0;
+    border-bottom: 2.5px solid #F2CC39;
+    word-wrap: break-word
+
+}
+.note-information{
+max-width: 39vmin;
+max-height: 17vmin;
+text-overflow: hidden;
+padding:2.2vmin;
+margin-bottom: 2vmin;
+word-wrap: break-word
+}
+
+.edit-btn,.delete-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+   
+}
+.date-label{
+    color:#20399f;
+    margin-bottom:0;
+}
+.note-date{
+    margin:0;
+    width:100%;
+}
+.card-actions{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content:space-around;
+height:auto;
+   
+    margin:1.5vmin 1.5vmin 0vmin 1.5vmin;
+
+    
+}
