@@ -66,7 +66,9 @@ function Mynotes() {
       <div className="div-btns">
         <div className="div-my-notes">
           <p>My Notes </p>
-          <p>{currentUser.email}</p>
+          <p>{currentUser.displayName ?
+          currentUser.displayName :
+          currentUser.email}</p>
         </div>
         <div className="search">
           <Icon icon="bi:search" color="#20399F" height="28" />
